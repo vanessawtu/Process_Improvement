@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Vanessa Tu – MyWork_FromTherpisttoDataAnalyst</title>
+
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+
+   <style>
+      :root {
+         --bg: #f8f3ea;
+         --text: #191815;
+         --muted: #6b6966;
+         --card: #ffffff;
+         --ring: #ece7df;
+         --shadow: 0 8px 30px rgba(0, 0, 0, .06);
+         --accent: #131313;
+         --radius: 18px;
+      }
+
+      * {
+         box-sizing: border-box;
+      }
+
+      html,
+      body {
+         height: 100%;
+      }
+
+      .band {
+         background: var(--bg);
+         padding: 60px 0;
+         margin: 20px 0 0;
+         border-top: none;
+      }
+
+      body {
+         margin: 0;
+         color: var(--text);
+         background: var(--bg);
+         font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         line-height: 1.6;
+      }
+
+      .wrap {
+         max-width: 1120px;
+         margin: 0 auto;
+         padding: 28px 20px 80px;
+      }
+
+      /* NAV */
+      .nav {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 16px;
+         margin-bottom: 48px;
+         border-bottom: 1px solid var(--ring);
+         padding-bottom: 12px;
+      }
+
+      .nav ul {
+         display: flex;
+         gap: 22px;
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         color: var(--muted);
+      }
+
+      .nav a {
+         color: inherit;
+         text-decoration: none;
+      }
+
+      /* Page title */
+      .page-title {
+         font-family: "DM Serif Display", serif;
+         font-size: 48px;
+         line-height: 1.1;
+         margin: 10px 0 6px;
+      }
+
+      .lead {
+         color: var(--muted);
+         margin: 0 0 28px
+      }
+
+     /* Filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 8px 0 22px;
+}
+
+/* Make chips match Page 2 */
+.chip {
+  border: 1px solid var(--ring);
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* Active chip state (same as Page 2) */
+.chip.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+}
+
+
+
+      
+
+      .panel {
+         max-width: 1120px;
+         margin-left: 0;
+         margin-right: auto;
+         background: var(--card);
+         border: 1px solid var(--ring);
+         border-radius: 12px;
+         padding: 50px 60px;
+         box-shadow: var(--shadow);
+      }
+
+      .panel-title {
+         font-family: "DM Serif Display", serif;
+         font-size: 38px;
+         margin: 0 0 24px;
+         color: var(--text);
+      }
+      .panel-body h2 {
+      font-family: "DM Serif Display", serif;
+      font-size: 38px;
+      font-weight: 600;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      line-height: 1.1;
+      color: var(--text);
+      max-width: 800px;
+      }
+      .panel-body {
+         font-size: 17px;
+         line-height: 1.8;
+         color: var(--muted);
+      }
+
+      .panel-body p {
+         margin: 0 0 16px;
+      }
+
+      /* BACK BUTTON */
+      .btn {
+         display: inline-block;
+         margin-top: 20px;
+         padding: 10px 18px;
+         font-size: 14px;
+         border: 1px solid var(--text);
+         border-radius: 999px;
+         text-decoration: none;
+         color: var(--text);
+         font-weight: 600;
+         transition: .2s;
+      }
+
+      .btn:hover {
+         background: var(--text);
+         color: var(--card);
+      }
+
+      /* DIVIDER BELOW PANEL */
+      .panel-divider {
+         border: none;
+         border-top: 1px solid var(--ring);
+         margin: 24px auto 32px;
+         width: 100%;
+         max-width: 1120px;
+         opacity: .8;
+      }
+
+      /* CONTACT SECTION */
+      .contact-section {
+         background: var(--bg);
+         padding: 20px 0 64px;
+         color: var(--text);
+      }
+
+      .contact-row {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 20px;
+         max-width: 1120px;
+         margin: 0 auto;
+      }
+
+      .contact-text {
+         flex: 1;
+         min-width: 300px;
+      }
+
+      .contact-email {
+         flex: 1;
+         min-width: 300px;
+         display: flex;
+         align-items: center;
+         gap: 8px;
+      }
+
+      .mail-icon {
+         font-size: 22px;
+         color: #3c4043;
+      }
+
+      .contact-email a {
+         color: var(--text);
+         font-weight: 600;
+         text-decoration: none;
+      }
+
+      .contact-email a:hover {
+         text-decoration: underline;
+      }
+      .story-meta {
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         margin-bottom: 12px;
+      }
+
+      .story-author-img {
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         object-fit: cover;
+      }
+
+      .story-author-text {
+         display: flex;
+         flex-direction: column;
+         line-height: 1.2;
+      }
+
+      .story-author-name {
+         font-weight: 600;
+         color: var(--text);
+         font-size: 14px;
+      }
+
+      .story-author-details {
+         font-size: 13px;
+         color: var(--muted);
+      }
+       .repo-btn {
+         display: inline-block;
+         padding: 10px 18px;
+         font-size: 14px;
+         background-color: var(--accent);
+         color: white;
+         border-radius: 999px;
+         text-decoration: none;
+         font-weight: 600;
+         margin: 24px 0;
+      }
+
+      .repo-btn:hover {
+         background-color: #000;
+        
+         
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrap">
+
+      <!-- NAV -->
+      <header class="nav">
+         <nav>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="MyWork.html">My Work</a></li>
+               <li><a href="https://www.linkedin.com/in/vanessa-tu-analytics" target="_blank">LinkedIn</a></li>
+               <li><a href="https://github.com/vanessawtu" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+         </nav>
+      </header>
+      <!-- Page header -->
+      <h1 class="page-title">My Work</h1>
+      <p class="lead">Analytics project, strategic thinking and process optimization.</p>
+
+      <!-- filter chips -->
+      <div class="filters">
+         <button class="chip active" onclick="location.href='MyWork.html#All'">All</button>
+         <button class="chip" onclick="location.href='MyWork.html#Analytics Project'">Analytics Project</button>
+         <button class="chip" onclick="location.href='MyWork.html#Process Improvement'">Process Improvement</button>
+         <button class="chip" onclick="location.href='MyWork.html#Strategic Thoughts'">Strategic Thoughts</button>
+         <button class="chip" onclick="location.href='MyWork.html#Growth Shelf'">Growth Shelf</button>
+      </div>
+      <!-- PROJECT CONTENT -->
+      <section class="band">
+         <div class="panel">
+          <div class="story-meta">
+                  <img src="Images/ProfilePictureSquare.jpg" alt="Author photo" class="story-author-img">
+                  <div class="story-author-text">
+                     <div class="story-author-name">Vanessa Tu</div>
+                     <div class="story-author-details">Dec 10 • 2 min read</div>
+                  </div>
+            </div>
+           
+            <div class="panel-body">
+               <h2>How I Used SQL to be proactive on data issue</h2>
+
+                  <a href="https://github.com/vanessawtu/Process_Improvement" target="_blank" rel="noopener noreferrer" class="repo-btn">View My Code Example ↗ </a>
+               
+                <p>
+    We were swamped with questions about data.
+  </p>
+
+  <p>
+    From analysts building reports for their divisions.<br>
+    From dashboard users relying on tools our team had built.<br>
+    From executives who needed “numbers” for upcoming board meetings.
+  </p>
+
+  <p>
+    This was six months after our company’s ERP implementation. Our data cloud platform, just one year old, had become the new single source of truth for analytics across the organization, supporting the new ERP system. While business users were still learning the new tools, engineers were simultaneously fixing bugs and building new features. Upstream systems were still evolving, and instability and unknowns remained.
+  </p>
+
+  <p>
+    At any given time, Sally from Finance might ask one member of our team why the fill rate looked unusually low. Jason might ask someone else to export all the data from a dashboard because he didn’t trust that all records were being captured. Meanwhile, John from the warehouse questioned yet another teammate about why the numbers on the dashboard didn’t match a spreadsheet he had built. All of these questions were coming to different people on our team—about the same underlying data issues.
+  </p>
+
+  <p>
+    We could certainly improve our communication, but I found myself asking a deeper question:
+    <em>Is there something we can do to be more proactive?</em>
+  </p>
+
+  <p>
+    What if we had a way to get a heads-up when expected data didn’t arrive?
+  </p>
+
+  <p>
+    I immediately began exploring whether the tools we already had could support a more proactive approach. That’s when I discovered Databricks’ <strong>Alert</strong> feature, which allows alerts to be built directly using SQL. Even better, these alerts can be integrated with Slack via webhooks, enabling notifications to be sent automatically once data scans are complete.
+  </p>
+
+With SQL script like this 
+
+<pre><code class="language-sql"></code>
+WITH currentdate AS (
+  SELECT date_trunc('day', current_timestamp()) AS start_ts,
+         date_add(date_trunc('day', current_timestamp()), 1) AS end_ts
+),
+checks AS (
+  SELECT 'Point_of_sale_transactions' AS table_name,
+         COUNT(*) AS rows_today
+  FROM Point_of_sale_transactions post
+  WHERE post.transaction_date>= (SELECT start_ts FROM currentdate)
+  AND post.transaction_date <  (SELECT end_ts   FROM currentdate)
+  
+  UNION ALL
+
+  SELECT 'member_sales' AS table_name,
+         COUNT(*) AS rows_today
+  FROM member_sales ms
+  WHERE ms.invoice_date>= (SELECT start_ts FROM currentdate)
+  AND ms.invoice_date <  (SELECT end_ts   FROM currentdate)
+  
+)
+SELECT 'NO_EXPECTED_CURRENT_DATA' AS status, table_name, rows_today
+FROM checks
+WHERE rows_today = 0;
+</code></pre>
+
+  <p>
+    Now, every morning after our data ingestion and transformation jobs finish, the alert scans all critical tables to verify that updates have been received as expected. With these notifications in place, we are able to:
+  </p>
+
+  <ul>
+    <li>Detect issues early and begin troubleshooting before users reach out</li>
+    <li>Eliminate duplicated effort across the team when investigating the same data problems</li>
+    <li>Communicate proactively and maintain users’ trust in the data</li>
+  </ul>
+
+  <p>
+    A simple “Can we get ahead of this?” led to a lightweight solution that helped our team work more efficiently and gave the business a better experience with data.
+  </p>
+
+               <a href="MyWork.html" class="btn">← Back to My Work</a>
+            </div>
+         </div>
+      </section>
+
+      <!-- DIVIDER -->
+      <hr class="panel-divider">
+
+   </div>
+
+</body>
+
+</html>
